@@ -1,0 +1,80 @@
+/*LOADER*/
+
+.loader-wrapper {
+    width: 100%;
+    max-width: 1440px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: fixed;
+    background-color: white;
+    opacity: 50%;
+    z-index: 500;
+    animation: display-loader 2s;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 5s;
+    animation-name: animatebottom;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+  }
+  
+  .loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #99e2d0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 3s linear infinite;
+    margin: 0;
+    z-index: 1000;
+  }
+  
+  @-webkit-keyframes animatebottom {
+    0% {
+      opacity: 1;
+      display: flex;
+    }
+    99% {
+      opacity: 1;
+      display: flex;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+  }
+  
+  @keyframes animatebottom {
+    0% {
+      opacity: 0.5;
+      display: flex;
+    }
+    99% {
+      opacity: 0.5;
+      display: flex;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes display-loader {
+    0% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+    }
+  }

@@ -1,0 +1,151 @@
+.main-rest {
+  background-color: #f6f6f6;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  margin-top: -50px;
+  position: relative;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (min-width: 1440px) {
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 500;
+    width: 1055px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+  }
+}
+
+.titre-coeur {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 35px;
+  h1 {
+    font-family: Shrikhand;
+    font-size: 28px;
+    font-weight: 400;
+  }
+  i {
+    font-size: 21px;
+  }
+}
+
+
+
+
+.img-restau {
+  width: 100%;
+  height: 275px;
+  @media (min-width: 1440px) {
+    height: 383px;
+  }
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 275px;
+    @media (min-width: 1440px) {
+      height: 383px;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.entrees {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.entrees h2 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+}
+
+.entrees h2:after {
+  content: " ";
+  display: block;
+  height: 3px;
+  width: 40px;
+  background: #99e2d0;
+  margin-top: 5px;
+}
+
+
+.card-rest {
+  position: relative;
+  width: 349px;
+  height: 72px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  transition: 0.5s linear;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+  @media (min-width: 1440px) {
+    width: 634px;
+  }
+  .card-description {
+    margin-left: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 287px;
+    transition: 0.5s;
+    h3 {
+      font-size: 18px;
+      font-weight: 500;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 287px;
+      transition: 0.5s;
+    }
+    p {
+      font-size: 15px;
+      font-weight: 300;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      transition: 0.5s;
+    }
+  }
+  .prix {
+    font-size: 15px;
+    font-weight: 700;
+    margin-right: 13px;
+    transition: 0.5s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
