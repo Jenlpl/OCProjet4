@@ -99,11 +99,22 @@ footer i {
 }
 
 .heart:hover {
+  animation: heart-animation 1s forwards;
+    transition: 0.5s;
   font-weight: 800;
   background: -webkit-linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@keyframes heart-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1; 
+  }
 }
 
 /*PINK BUTTON*/
@@ -133,6 +144,10 @@ footer i {
   transition: 0.5s;
   opacity: 80%;
   z-index: 600;
+}
+
+.button-rest {
+  width: 186px;
 }
 
 /*LOCATION*/
@@ -223,7 +238,9 @@ footer i {
   align-items: center;
   position: relative;
   font-size: 16px;
+  font-family: 'Roboto';
 }
+
 @media (min-width: 1440px) {
   .fonctionnement .fonctionnement_buttons button {
     width: 322px;
@@ -640,12 +657,11 @@ footer i {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   max-width: 287px;
   transition: 0.5s;
 }
+
+
 .card-rest .card-description h3 {
   font-size: 18px;
   font-weight: 500;
@@ -655,6 +671,13 @@ footer i {
   max-width: 287px;
   transition: 0.5s;
 }
+@media (min-width: 1440px) {
+  .card-rest .card-description h3  {
+    text-overflow: unset;
+    overflow: initial;
+  }
+}
+
 .card-rest .card-description p {
   font-size: 15px;
   font-weight: 300;
@@ -662,6 +685,13 @@ footer i {
   white-space: nowrap;
   text-overflow: ellipsis;
   transition: 0.5s;
+  max-width: 287px;
+}
+@media (min-width: 1440px) {
+  .card-rest .card-description p  {
+    text-overflow: unset;
+    overflow: initial;
+  }
 }
 .card-rest .prix {
   font-size: 15px;

@@ -7,9 +7,21 @@
     z-index: 600;
   }
   .heart:hover {
+    transform: rotate(90deg);
+    animation: heart-animation 1s forwards;
+    transition: 0.5s;
     font-weight: 800;
     background: -webkit-linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  @keyframes heart-animation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1; 
+    }
   }

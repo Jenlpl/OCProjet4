@@ -1,4 +1,4 @@
-/*LOADER*/
+/*WRAPPER*/
 
 .loader-wrapper {
     width: 100%;
@@ -13,39 +13,20 @@
     opacity: 50%;
     z-index: 500;
     animation: display-loader 2s;
-    -webkit-animation-name: animatebottom;
-    -webkit-animation-duration: 5s;
     animation-name: animatebottom;
     animation-fill-mode: forwards;
     animation-duration: 3s;
   }
-  
-  .loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #99e2d0;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 3s linear infinite;
-    margin: 0;
-    z-index: 1000;
-  }
-  
-  @-webkit-keyframes animatebottom {
+
+  @keyframes display-loader {
     0% {
-      opacity: 1;
-      display: flex;
-    }
-    99% {
-      opacity: 1;
-      display: flex;
+      visibility: visible;
     }
     100% {
-      opacity: 0;
-      display: none;
+      visibility: hidden;
     }
   }
-  
+
   @keyframes animatebottom {
     0% {
       opacity: 0.5;
@@ -61,6 +42,19 @@
     }
   }
   
+  /*LOADER*/
+
+  .loader {
+    border: 16px solid #f3f3f3; 
+    border-top: 16px solid #99e2d0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 3s linear infinite;
+    margin: 0;
+    z-index: 1000;
+  }
+  
   @keyframes spin {
     0% {
       transform: rotate(0deg);
@@ -70,11 +64,4 @@
     }
   }
   
-  @keyframes display-loader {
-    0% {
-      visibility: visible;
-    }
-    100% {
-      visibility: hidden;
-    }
-  }
+ 
