@@ -99,10 +99,22 @@ footer i {
   z-index: 600;
   position: absolute;
   right: 0%;
-  transition: all 1s;
 }
 
-.heart-full {
+.fa-solid  {
+  color: transparent;
+  background-image: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.fa-solid:hover {
+  opacity: 1;
+  transform: scale(1.2)
+}
+/*.heart-full {
   opacity: 0;
   transition: all 1s;
   font-size: 22px;
