@@ -1,27 +1,36 @@
 /*HEART*/
 
 .heart {
-    font-size: 22px;
-    margin-right: 20px;
-    color: black;
-    z-index: 600;
-  }
-  .heart:hover {
-    transform: rotate(90deg);
-    animation: heart-animation 1s forwards;
-    transition: 0.5s;
-    font-weight: 800;
-    background: -webkit-linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
+  font-size: 22px;
+  color: black;
+  z-index: 600;
+  position: absolute;
+  right: 20px;
+  .fa-solid  {
+    color: transparent;
+    background-image: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+    .fa-heart {
+      font-size: 22px;
+      position: absolute;
+      right: 0%;
+      top: -15px;
+    }
+  }
+  
+  .heart .fa-solid:hover {
+    opacity: 1;
+    transform: scale(1.2)
   }
 
-  @keyframes heart-animation {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1; 
-    }
+  .card .heart {
+    font-size: 22px;
+    color: black;
+    z-index: 600;
+    position: absolute;
+    right: 20px;
   }
